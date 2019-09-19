@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dodo/Projects/spellcheck/include/hash.h
+vector
+-
+string
+-
+
+/home/dodo/Projects/spellcheck/src/hash.cpp
+iostream
+-
+../include/hash.h
+/home/dodo/Projects/spellcheck/include/hash.h
+

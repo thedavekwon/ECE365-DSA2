@@ -1,0 +1,3 @@
+/home/dodo/Projects/spellcheck/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/dodo/Projects/spellcheck/cmake-build-debug/CMakeFiles/main.dir
+/home/dodo/Projects/spellcheck/cmake-build-debug/CMakeFiles/edit_cache.dir
