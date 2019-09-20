@@ -19,11 +19,9 @@ unsigned int hashTable::hash(const std::string &key) {
 
 unsigned hashTable::findPos(const std::string &key) {
     unsigned int currentPos = hash(key);
-    std::cout << currentPos << " ";
-    while ((data[currentPos].isOccupied || !data[currentPos].isDeleted) && data[currentPos].key == key) {
+    while ((data[currentPos].isOccupied || data[currentPos].isDeleted) && data[currentPos].key != key) {
         currentPos = (currentPos + 1) % capacity;
     }
-    std::cout << currentPos << std::endl;
     return currentPos;
 }
 
@@ -78,7 +76,7 @@ int hashTable::insert(const std::string &key, void *pv) {
 }
 
 bool hashTable::contains(const std::string &key) {
-    return findPos(key) != -1;
+    return data[findPos(key)].isOccupied;
 }
 
 void *hashTable::getPointer(const std::string &key, bool *b) {
@@ -97,14 +95,14 @@ bool hashTable::remove(const std::string &key) {
 }
 
 void hashTable::printContent() {
-    for (auto &item : data) {
-        std::cout << item.isOccupied << " ";
-    }
-    std::cout << std::endl;
-
-    for (auto &item : data) {
-        std::cout << item.isDeleted << " ";
-    }
+//    for (auto &item : data) {
+//        std::cout << item.isOccupied << " ";
+//    }
+//    std::cout << std::endl;
+//
+//    for (auto &item : data) {
+//        std::cout << item.isDeleted << " ";
+//    }
 //    std::cout << std::endl;
 //
 //    for (auto &item : data) {

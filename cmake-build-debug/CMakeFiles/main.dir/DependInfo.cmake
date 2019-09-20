@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/dodo/Projects/spellcheck/src/hash.cpp" "/home/dodo/Projects/spellcheck/cmake-build-debug/CMakeFiles/main.dir/src/hash.cpp.o"
-  "/home/dodo/Projects/spellcheck/src/main.cpp" "/home/dodo/Projects/spellcheck/cmake-build-debug/CMakeFiles/main.dir/src/main.cpp.o"
+  "/home/vr-lab/Dave/projects/ECE365-SpellCheck/src/hash.cpp" "/home/vr-lab/Dave/projects/ECE365-SpellCheck/cmake-build-debug/CMakeFiles/main.dir/src/hash.cpp.o"
+  "/home/vr-lab/Dave/projects/ECE365-SpellCheck/src/main.cpp" "/home/vr-lab/Dave/projects/ECE365-SpellCheck/cmake-build-debug/CMakeFiles/main.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

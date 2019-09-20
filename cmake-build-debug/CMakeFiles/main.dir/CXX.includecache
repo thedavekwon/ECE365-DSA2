@@ -6,15 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/dodo/Projects/spellcheck/include/hash.h
+/home/vr-lab/Dave/projects/ECE365-SpellCheck/include/hash.h
 vector
 -
 string
 -
 
-/home/dodo/Projects/spellcheck/src/hash.cpp
+/home/vr-lab/Dave/projects/ECE365-SpellCheck/src/main.cpp
+../include/hash.h
+/home/vr-lab/Dave/projects/ECE365-SpellCheck/include/hash.h
 iostream
 -
-../include/hash.h
-/home/dodo/Projects/spellcheck/include/hash.h
+fstream
+-
+locale
+-
+chrono
+-
 
