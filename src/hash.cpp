@@ -6,8 +6,7 @@
 #include "../include/hash.h"
 
 // https://planetmath.org/goodhashtableprimes
-std::vector<int> hashTable::primes = {3, 7, 17, 33, 53, 97, 193, 389, 769, 1543, 3079, 6151, 12289, 24593, 49157,
-                                      98317};
+std::vector<int> hashTable::primes = {24593, 49157, 98317, 196613, 393241, 786433, 1572869, 3145739, 6291469};
 
 // hash function
 unsigned int hashTable::hash(const std::string &key) {
@@ -95,20 +94,17 @@ bool hashTable::remove(const std::string &key) {
 }
 
 void hashTable::printContent() {
-//    for (auto &item : data) {
-//        std::cout << item.isOccupied << " ";
-//    }
-//    std::cout << std::endl;
-//
-//    for (auto &item : data) {
-//        std::cout << item.isDeleted << " ";
-//    }
-//    std::cout << std::endl;
-//
-//    for (auto &item : data) {
-//        if (item.key == "") std::cout << " ";
-//        std::cout << item.key << " ";
-//    }
-//    std::cout << std::endl;
+    for (auto &item : data) std::cout << item.isOccupied << " ";
+    std::cout << std::endl;
+    
+    for (auto &item : data) std::cout << item.isDeleted << " ";
+    std::cout << std::endl;
+    
+    for (auto &item : data) {
+        if (item.key == "") std::cout << " ";
+        std::cout << item.key << " ";
+    }
+    std::cout << std::endl;
+    
     std::cout << filled << "/" << capacity << std::endl;
 }

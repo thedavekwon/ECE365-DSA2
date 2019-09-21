@@ -1,38 +1,4 @@
-//
-// Created by Do Hyung Kwon on 9/15/19.
-//
-#include "../include/hash.h"
-
-#include <iostream>
-#include <fstream>
-#include <locale>
-#include <chrono>
-
-bool check_valid_word(const std::string& s);
-void create_dictionary(const std::string& dictionary_file, hashTable* dict);
-void spell_check(const std::string& input_file, const std::string& output_file, hashTable* dict);
-std::vector<std::string> split(const std::string &line);
-bool check_invalid_character(char c);
-void to_lower_case(std::string &word);
-void report_error(std::ofstream &output, const std::string &word, int line_cnt, bool is_long);
-
-int main() {
-    std::string dictionary_file, input_file, output_file;
-
-    std::cout << "Enter name of dictionary: ";
-    std::cin >> dictionary_file;
-
-    std::cout << "Enter name of input file: ";
-    std::cin >> input_file;
-
-    std::cout << "Enter name of output file: ";
-    std::cin >> output_file;
-
-    auto dict = new hashTable(hashTable::primes[0]);
-
-    create_dictionary(dictionary_file, dict);
-    spell_check(input_file, output_file, dict);
-}
+#include "../include/functions.h"
 
 bool check_valid_word(const std::string& s) {
     if (s.size() > 20) return false;
