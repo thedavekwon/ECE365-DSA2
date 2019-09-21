@@ -10,6 +10,11 @@ bool check_invalid_character(char c) {
     return !isdigit(c) && !isalpha(c) && c != '-' && c != '\'';
 }
 
+bool check_digits(const std::string& s) {
+    for (auto c : s) if (isdigit(c)) return true;
+    return false;
+}
+
 void create_dictionary(const std::string& dictionary_file, hashTable* dict) {
     auto start = std::chrono::system_clock::now();
     std::ifstream dictionary(dictionary_file);
@@ -44,6 +49,7 @@ void spell_check(const std::string& input_file, const std::string& output_file, 
             for (auto &word : parsed) {
                 to_lower_case(word);
                 if (word.size() > 20) report_error(output, word, line_cnt, true);
+                else if (check_digits(word)) continue; 
                 else if (!dict->contains(word)) report_error(output, word, line_cnt, false);
             }
         }
