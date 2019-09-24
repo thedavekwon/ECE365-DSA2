@@ -1,3 +1,8 @@
+//
+// Created by Do Hyung Kwon on 9/15/19.
+//
+
+
 #include "../include/functions.h"
 
 bool check_valid_word(const std::string& s) {

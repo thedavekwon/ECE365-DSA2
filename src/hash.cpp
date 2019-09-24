@@ -18,7 +18,7 @@ unsigned int hashTable::hash(const std::string &key) {
 
 unsigned hashTable::findPos(const std::string &key) {
     unsigned int currentPos = hash(key);
-    while ((data[currentPos].isOccupied || data[currentPos].isDeleted) && data[currentPos].key != key) {
+    while (data[currentPos].isOccupied && !data[currentPos].isDeleted && data[currentPos].key != key) {
         currentPos = (currentPos + 1) % capacity;
     }
     return currentPos;
@@ -39,7 +39,6 @@ bool hashTable::rehash() {
     for (auto &item : data) {
         item.isOccupied = false;
         item.isDeleted = false;
-        item.key = "";
     }
     for (auto &item : oldData) {
         if (!item.isDeleted && item.isOccupied) insert(std::move(item.key));
@@ -55,7 +54,6 @@ hashTable::hashTable(int size) {
     data.resize(size);
     capacity = size;
     filled = 0;
-    // for (auto &item : data) data.isOccupied = false;
 }
 
 int hashTable::insert(const std::string &key, void *pv) {
