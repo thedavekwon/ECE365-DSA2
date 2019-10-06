@@ -28,7 +28,7 @@ bool hashTable::rehash() {
     std::vector<hashItem> oldData = data;
     // check memory error
     try {
-        unsigned int new_size = getPrime(capacity+1);
+        unsigned int new_size = getPrime(capacity + 1);
         data.resize(new_size);
         capacity = new_size;
     } catch (std::bad_alloc &exc) {
@@ -41,7 +41,7 @@ bool hashTable::rehash() {
         item.isDeleted = false;
     }
     for (auto &item : oldData) {
-        if (!item.isDeleted && item.isOccupied) insert(std::move(item.key));
+        if (!item.isDeleted && item.isOccupied) insert(item.key, item.pv);
     }
     return true;
 }
@@ -64,6 +64,7 @@ int hashTable::insert(const std::string &key, void *pv) {
     data[currentPos].key = key;
     data[currentPos].isOccupied = true;
     data[currentPos].isDeleted = false;
+    data[currentPos].pv = pv;
 
     if (++filled > capacity / 2)
         if (!rehash())
@@ -73,36 +74,45 @@ int hashTable::insert(const std::string &key, void *pv) {
 }
 
 bool hashTable::contains(const std::string &key) {
-    return data[findPos(key)].isOccupied;
+    auto pos = findPos(key);
+    return data[pos].isOccupied;
 }
 
 void *hashTable::getPointer(const std::string &key, bool *b) {
-
+    unsigned int currentPos = findPos(key);
+    if (b != nullptr) *b = false;
+    if (!data[currentPos].isOccupied) { return nullptr; }
+    if (b != nullptr) *b = true;
+    return data[currentPos].pv;
 }
 
 int hashTable::setPointer(const std::string &key, void *pv) {
-
+    unsigned int currentPos = findPos(key);
+    if (!data[currentPos].isOccupied) return 1;
+    data[currentPos].pv = pv;
+    return 0;
 }
 
 bool hashTable::remove(const std::string &key) {
-    int currentPos = findPos(key);
+    unsigned int currentPos = findPos(key);
     if (!data[currentPos].isOccupied) return false;
     data[currentPos].isDeleted = true;
+    data[currentPos].isOccupied = false;
     return true;
 }
 
 void hashTable::printContent() {
     for (auto &item : data) std::cout << item.isOccupied << " ";
     std::cout << std::endl;
-    
+
     for (auto &item : data) std::cout << item.isDeleted << " ";
     std::cout << std::endl;
-    
+
     for (auto &item : data) {
         if (item.key == "") std::cout << " ";
         std::cout << item.key << " ";
     }
     std::cout << std::endl;
-    
+
     std::cout << filled << "/" << capacity << std::endl;
 }

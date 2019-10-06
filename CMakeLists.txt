@@ -3,4 +3,5 @@ project(spellcheck)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main src/spellcheck.cpp src/hash.cpp)
+add_executable(spellcheck src/spellcheck.cpp src/hash.cpp src/functions.cpp)
+add_executable(heap src/useHeap.cpp src/hash.cpp src/functions.cpp src/heap.cpp)

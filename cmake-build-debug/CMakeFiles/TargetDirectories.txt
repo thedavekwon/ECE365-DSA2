@@ -1,3 +1,4 @@
-/home/vr-lab/Dave/projects/ECE365-SpellCheck/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/vr-lab/Dave/projects/ECE365-SpellCheck/cmake-build-debug/CMakeFiles/main.dir
-/home/vr-lab/Dave/projects/ECE365-SpellCheck/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles/spellcheck.dir
+/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles/heap.dir

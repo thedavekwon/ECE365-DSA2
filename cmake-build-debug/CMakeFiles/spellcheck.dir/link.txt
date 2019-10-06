@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/spellcheck.dir/src/spellcheck.cpp.o CMakeFiles/spellcheck.dir/src/hash.cpp.o CMakeFiles/spellcheck.dir/src/functions.cpp.o  -o spellcheck 

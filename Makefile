@@ -1,17 +1,20 @@
-spell.exe: spellcheck.o hash.o functions.o
-	g++ -o spell.exe spellcheck.o hash.o functions.o
+useHeap.exe: useHeap.o heap.o hash.o
+	g++ -o useHeap.exe useHeap.o heap.o hash.o
+	
+run:
+	./useHeap.exe < file/sampleIn.txt
 
-spellcheck.o: src/spellcheck.cpp include/hash.h
-	g++ -c src/spellcheck.cpp
+useHeap.o: src/useHeap.cpp
+	g++ -c src/useHeap.cpp
 
-hash.o: src/hash.cpp include/hash.h
-	g++ -c src/hash.cpp
+heap.o: src/heap.cpp include/heap.h
+	g++ -c src/heap.cpp
 
-functions.o: src/functions.cpp include/functions.h
-	g++ -c src/functions.cpp
+hash.o: src/hash.cpp include/hash.h src/functions.cpp include/functions.h
+	g++ -c src/hash.cpp src/functions.cpp
 
 debug:
-	g++ -g -o spellDebug.exe src/spellcheck.cpp src/hash.cpp src/functions.cpp
+	g++ -g -o useHeapDebug.exe src/useHeap.cpp src/heap.cpp src/hash.cpp
 
 clean:
 	rm -f *.exe *.o *.stackdump *~
@@ -20,3 +23,4 @@ backup:
 	test -d backups || mkdir backups
 	cp *.cpp backups
 	cp *.h backups
+	cp Makefile backups
