@@ -37,8 +37,8 @@ int heap::deleteMin(std::string *pId, int *pKey, void *ppData) {
     data[1] = std::move(data[currentSize--]);
     hTable.setPointer(data[1].id, &data[1]);
     percolateDown(1);
-    if (pId) std::cout << *pId << std::endl;
-    if (pKey) std::cout << *pKey << std::endl;
+    if (DEBUG && pId) std::cout << *pId << std::endl;
+    if (DEBUG && pKey) std::cout << *pKey << std::endl;
     if (DEBUG) print();
     return 0;
 }
@@ -80,7 +80,7 @@ int heap::setKey(const std::string &id, int key) {
     auto pv = static_cast<node *>(hTable.getPointer(id, &found));
     if (!found) return 1;
     int pos = getPos(pv);
-    std::cout << "found pos: " << pos << std::endl;
+    if (DEBUG) std::cout << "found pos: " << pos << std::endl;
     if (pv->key < key) increaseKey(pos, key);
     else if (pv->key > key) decreaseKey(pos, key);
     if (DEBUG) print();
