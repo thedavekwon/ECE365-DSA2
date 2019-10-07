@@ -45,9 +45,8 @@ int heap::deleteMin(std::string *pId, int *pKey, void *ppData) {
 
 int heap::percolateUp(int curPos) {
     for (; data[0].key < data[curPos / 2].key; curPos /= 2) {
-        hTable.setPointer(data[curPos].id, &data[curPos / 2]);
-        hTable.setPointer(data[curPos / 2].id, &data[curPos]);
         data[curPos] = std::move(data[curPos / 2]);
+        hTable.setPointer(data[curPos].id, &data[curPos]);
     }
     data[curPos] = std::move(data[0]);
     hTable.setPointer(data[curPos].id, &data[curPos]);
@@ -61,9 +60,8 @@ int heap::percolateDown(int curPos) {
         child = curPos * 2;
         if (child != currentSize && data[child + 1].key < data[child].key) ++child;
         if (data[child].key < tmp.key) {
-            hTable.setPointer(data[curPos].id, &data[child]);
-            hTable.setPointer(data[child].id, &data[curPos]);
             data[curPos] = std::move(data[child]);
+            hTable.setPointer(data[curPos].id, &data[curPos]);
         } else break;
     }
     data[curPos] = std::move(tmp);

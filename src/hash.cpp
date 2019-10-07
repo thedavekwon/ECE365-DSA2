@@ -60,7 +60,6 @@ int hashTable::insert(const std::string &key, void *pv) {
     unsigned int currentPos = findPos(key);
     if (data[currentPos].isOccupied && data[currentPos].key == key) return 1;
 
-    // reset
     data[currentPos].key = key;
     data[currentPos].isOccupied = true;
     data[currentPos].isDeleted = false;
