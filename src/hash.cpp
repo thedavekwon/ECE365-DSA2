@@ -74,7 +74,7 @@ int hashTable::insert(const std::string &key, void *pv) {
 
 bool hashTable::contains(const std::string &key) {
     auto pos = findPos(key);
-    return data[pos].isOccupied;
+    return data[pos].isOccupied && !data[pos].isDeleted;
 }
 
 void *hashTable::getPointer(const std::string &key, bool *b) {
