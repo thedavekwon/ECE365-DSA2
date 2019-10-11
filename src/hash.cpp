@@ -6,7 +6,7 @@
 #include <iostream>
 
 // https://planetmath.org/goodhashtableprimes
-std::vector<int> hashTable::primes = {24593, 49157, 98317, 196613, 393241, 786433, 1572869, 3145739, 6291469};
+std::vector<int> hashTable::primes = {49157, 98317, 196613, 393241, 786433, 1572869, 3145739, 6291469};
 
 // hash function
 unsigned int hashTable::hash(const std::string &key)
@@ -17,10 +17,11 @@ unsigned int hashTable::hash(const std::string &key)
     return hashVal % capacity;
 }
 
+// you should look for non-deleted key itself or an empty cell
 unsigned hashTable::findPos(const std::string &key)
 {
     unsigned int currentPos = hash(key);
-    while (data[currentPos].isOccupied && !data[currentPos].isDeleted && data[currentPos].key != key)
+    while ((data[currentPos].isOccupied || data[currentPos].isDeleted) && data[currentPos].key != key)
     {
         currentPos = (currentPos + 1) % capacity;
     }
@@ -30,7 +31,6 @@ unsigned hashTable::findPos(const std::string &key)
 bool hashTable::rehash()
 {
     std::vector<hashItem> oldData = data;
-    // check memory error
     try
     {
         unsigned int new_size = getPrime(capacity + 1);
@@ -88,8 +88,8 @@ int hashTable::insert(const std::string &key, void *pv)
 
 bool hashTable::contains(const std::string &key)
 {
-    auto pos = findPos(key);
-    return data[pos].isOccupied && data[pos].key == key;
+    auto currentPos = findPos(key);
+    return data[currentPos].isOccupied && !data[currentPos].isDeleted && data[currentPos].key == key;
 }
 
 void *hashTable::getPointer(const std::string &key, bool *b)
@@ -97,7 +97,7 @@ void *hashTable::getPointer(const std::string &key, bool *b)
     unsigned int currentPos = findPos(key);
     if (b != nullptr)
         *b = false;
-    if (!data[currentPos].isOccupied || data[currentPos].isDeleted || data[currentPos].key != key)
+    if ((!data[currentPos].isOccupied && data[currentPos].isDeleted) || data[currentPos].key != key)
         return nullptr;
     if (b != nullptr)
         *b = true;
@@ -107,7 +107,7 @@ void *hashTable::getPointer(const std::string &key, bool *b)
 int hashTable::setPointer(const std::string &key, void *pv)
 {
     unsigned int currentPos = findPos(key);
-    if (!data[currentPos].isOccupied || data[currentPos].isDeleted || data[currentPos].key != key)
+    if ((!data[currentPos].isOccupied && data[currentPos].isDeleted) || data[currentPos].key != key)
         return 1;
     data[currentPos].pv = pv;
     return 0;
@@ -116,7 +116,7 @@ int hashTable::setPointer(const std::string &key, void *pv)
 bool hashTable::remove(const std::string &key)
 {
     unsigned int currentPos = findPos(key);
-    if (!data[currentPos].isOccupied || data[currentPos].isDeleted || data[currentPos].key != key)
+    if ((!data[currentPos].isOccupied && data[currentPos].isDeleted) || data[currentPos].key != key)
         return false;
     data[currentPos].isDeleted = true;
     data[currentPos].isOccupied = false;

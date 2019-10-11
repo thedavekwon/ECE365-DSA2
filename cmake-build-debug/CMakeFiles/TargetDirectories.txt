@@ -1,4 +1,4 @@
-/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles/spellcheck.dir
-/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles/heap.dir
+/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles/spellcheck.dir
+/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles/heap.dir

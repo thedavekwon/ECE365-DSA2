@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/dodo/Projects/ECE365/src/functions.cpp" "/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles/heap.dir/src/functions.cpp.o"
-  "/home/dodo/Projects/ECE365/src/hash.cpp" "/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles/heap.dir/src/hash.cpp.o"
-  "/home/dodo/Projects/ECE365/src/heap.cpp" "/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles/heap.dir/src/heap.cpp.o"
-  "/home/dodo/Projects/ECE365/src/useHeap.cpp" "/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles/heap.dir/src/useHeap.cpp.o"
+  "/home/dodo/Projects/ECE365-DSA2/src/functions.cpp" "/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles/heap.dir/src/functions.cpp.o"
+  "/home/dodo/Projects/ECE365-DSA2/src/hash.cpp" "/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles/heap.dir/src/hash.cpp.o"
+  "/home/dodo/Projects/ECE365-DSA2/src/heap.cpp" "/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles/heap.dir/src/heap.cpp.o"
+  "/home/dodo/Projects/ECE365-DSA2/src/useHeap.cpp" "/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles/heap.dir/src/useHeap.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

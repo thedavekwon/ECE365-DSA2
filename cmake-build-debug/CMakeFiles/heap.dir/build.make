@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/85/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/88/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/85/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/88/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dodo/Projects/ECE365
+CMAKE_SOURCE_DIR = /home/dodo/Projects/ECE365-DSA2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dodo/Projects/ECE365/cmake-build-debug
+CMAKE_BINARY_DIR = /home/dodo/Projects/ECE365-DSA2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/heap.dir/depend.make
@@ -59,55 +59,55 @@ include CMakeFiles/heap.dir/flags.make
 
 CMakeFiles/heap.dir/src/useHeap.cpp.o: CMakeFiles/heap.dir/flags.make
 CMakeFiles/heap.dir/src/useHeap.cpp.o: ../src/useHeap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/heap.dir/src/useHeap.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/heap.dir/src/useHeap.cpp.o -c /home/dodo/Projects/ECE365/src/useHeap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/heap.dir/src/useHeap.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/heap.dir/src/useHeap.cpp.o -c /home/dodo/Projects/ECE365-DSA2/src/useHeap.cpp
 
 CMakeFiles/heap.dir/src/useHeap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/heap.dir/src/useHeap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dodo/Projects/ECE365/src/useHeap.cpp > CMakeFiles/heap.dir/src/useHeap.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dodo/Projects/ECE365-DSA2/src/useHeap.cpp > CMakeFiles/heap.dir/src/useHeap.cpp.i
 
 CMakeFiles/heap.dir/src/useHeap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/heap.dir/src/useHeap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dodo/Projects/ECE365/src/useHeap.cpp -o CMakeFiles/heap.dir/src/useHeap.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dodo/Projects/ECE365-DSA2/src/useHeap.cpp -o CMakeFiles/heap.dir/src/useHeap.cpp.s
 
 CMakeFiles/heap.dir/src/hash.cpp.o: CMakeFiles/heap.dir/flags.make
 CMakeFiles/heap.dir/src/hash.cpp.o: ../src/hash.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/heap.dir/src/hash.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/heap.dir/src/hash.cpp.o -c /home/dodo/Projects/ECE365/src/hash.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/heap.dir/src/hash.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/heap.dir/src/hash.cpp.o -c /home/dodo/Projects/ECE365-DSA2/src/hash.cpp
 
 CMakeFiles/heap.dir/src/hash.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/heap.dir/src/hash.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dodo/Projects/ECE365/src/hash.cpp > CMakeFiles/heap.dir/src/hash.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dodo/Projects/ECE365-DSA2/src/hash.cpp > CMakeFiles/heap.dir/src/hash.cpp.i
 
 CMakeFiles/heap.dir/src/hash.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/heap.dir/src/hash.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dodo/Projects/ECE365/src/hash.cpp -o CMakeFiles/heap.dir/src/hash.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dodo/Projects/ECE365-DSA2/src/hash.cpp -o CMakeFiles/heap.dir/src/hash.cpp.s
 
 CMakeFiles/heap.dir/src/functions.cpp.o: CMakeFiles/heap.dir/flags.make
 CMakeFiles/heap.dir/src/functions.cpp.o: ../src/functions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/heap.dir/src/functions.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/heap.dir/src/functions.cpp.o -c /home/dodo/Projects/ECE365/src/functions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/heap.dir/src/functions.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/heap.dir/src/functions.cpp.o -c /home/dodo/Projects/ECE365-DSA2/src/functions.cpp
 
 CMakeFiles/heap.dir/src/functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/heap.dir/src/functions.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dodo/Projects/ECE365/src/functions.cpp > CMakeFiles/heap.dir/src/functions.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dodo/Projects/ECE365-DSA2/src/functions.cpp > CMakeFiles/heap.dir/src/functions.cpp.i
 
 CMakeFiles/heap.dir/src/functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/heap.dir/src/functions.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dodo/Projects/ECE365/src/functions.cpp -o CMakeFiles/heap.dir/src/functions.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dodo/Projects/ECE365-DSA2/src/functions.cpp -o CMakeFiles/heap.dir/src/functions.cpp.s
 
 CMakeFiles/heap.dir/src/heap.cpp.o: CMakeFiles/heap.dir/flags.make
 CMakeFiles/heap.dir/src/heap.cpp.o: ../src/heap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/heap.dir/src/heap.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/heap.dir/src/heap.cpp.o -c /home/dodo/Projects/ECE365/src/heap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/heap.dir/src/heap.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/heap.dir/src/heap.cpp.o -c /home/dodo/Projects/ECE365-DSA2/src/heap.cpp
 
 CMakeFiles/heap.dir/src/heap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/heap.dir/src/heap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dodo/Projects/ECE365/src/heap.cpp > CMakeFiles/heap.dir/src/heap.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dodo/Projects/ECE365-DSA2/src/heap.cpp > CMakeFiles/heap.dir/src/heap.cpp.i
 
 CMakeFiles/heap.dir/src/heap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/heap.dir/src/heap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dodo/Projects/ECE365/src/heap.cpp -o CMakeFiles/heap.dir/src/heap.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dodo/Projects/ECE365-DSA2/src/heap.cpp -o CMakeFiles/heap.dir/src/heap.cpp.s
 
 # Object files for target heap
 heap_OBJECTS = \
@@ -125,7 +125,7 @@ heap: CMakeFiles/heap.dir/src/functions.cpp.o
 heap: CMakeFiles/heap.dir/src/heap.cpp.o
 heap: CMakeFiles/heap.dir/build.make
 heap: CMakeFiles/heap.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable heap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable heap"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/heap.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,6 +138,6 @@ CMakeFiles/heap.dir/clean:
 .PHONY : CMakeFiles/heap.dir/clean
 
 CMakeFiles/heap.dir/depend:
-	cd /home/dodo/Projects/ECE365/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dodo/Projects/ECE365 /home/dodo/Projects/ECE365 /home/dodo/Projects/ECE365/cmake-build-debug /home/dodo/Projects/ECE365/cmake-build-debug /home/dodo/Projects/ECE365/cmake-build-debug/CMakeFiles/heap.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dodo/Projects/ECE365-DSA2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dodo/Projects/ECE365-DSA2 /home/dodo/Projects/ECE365-DSA2 /home/dodo/Projects/ECE365-DSA2/cmake-build-debug /home/dodo/Projects/ECE365-DSA2/cmake-build-debug /home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles/heap.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/heap.dir/depend
 

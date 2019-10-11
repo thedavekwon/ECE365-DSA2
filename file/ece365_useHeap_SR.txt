@@ -193,9 +193,9 @@ Enter an associated integer key: 60
 
 Call to 'setKey' returned: 0
 
-
+false
 Options:
-1 - Insert a new item into the binary heap
+1 - Insert a new item into the binfalseary heap
 2 - Set the key of a specified item
 3 - Delete a specified item
 4 - Perform a deleteMin
