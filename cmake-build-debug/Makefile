@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/88/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/92/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/88/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/92/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/dodo/Projects/ECE365-DSA2/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/88/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/92/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/88/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/92/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named dijkstra
+
+# Build rule for target.
+dijkstra: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dijkstra
+.PHONY : dijkstra
+
+# fast build rule for target.
+dijkstra/fast:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/build
+.PHONY : dijkstra/fast
+
+#=============================================================================
 # Target rules for targets named spellcheck
 
 # Build rule for target.
@@ -136,12 +149,67 @@ heap/fast:
 	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/build
 .PHONY : heap/fast
 
+src/dijkstra.o: src/dijkstra.cpp.o
+
+.PHONY : src/dijkstra.o
+
+# target to build an object file
+src/dijkstra.cpp.o:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/dijkstra.cpp.o
+.PHONY : src/dijkstra.cpp.o
+
+src/dijkstra.i: src/dijkstra.cpp.i
+
+.PHONY : src/dijkstra.i
+
+# target to preprocess a source file
+src/dijkstra.cpp.i:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/dijkstra.cpp.i
+.PHONY : src/dijkstra.cpp.i
+
+src/dijkstra.s: src/dijkstra.cpp.s
+
+.PHONY : src/dijkstra.s
+
+# target to generate assembly for a file
+src/dijkstra.cpp.s:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/dijkstra.cpp.s
+.PHONY : src/dijkstra.cpp.s
+
+src/findShortestPath.o: src/findShortestPath.cpp.o
+
+.PHONY : src/findShortestPath.o
+
+# target to build an object file
+src/findShortestPath.cpp.o:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/findShortestPath.cpp.o
+.PHONY : src/findShortestPath.cpp.o
+
+src/findShortestPath.i: src/findShortestPath.cpp.i
+
+.PHONY : src/findShortestPath.i
+
+# target to preprocess a source file
+src/findShortestPath.cpp.i:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/findShortestPath.cpp.i
+.PHONY : src/findShortestPath.cpp.i
+
+src/findShortestPath.s: src/findShortestPath.cpp.s
+
+.PHONY : src/findShortestPath.s
+
+# target to generate assembly for a file
+src/findShortestPath.cpp.s:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/findShortestPath.cpp.s
+.PHONY : src/findShortestPath.cpp.s
+
 src/functions.o: src/functions.cpp.o
 
 .PHONY : src/functions.o
 
 # target to build an object file
 src/functions.cpp.o:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/functions.cpp.o
 	$(MAKE) -f CMakeFiles/spellcheck.dir/build.make CMakeFiles/spellcheck.dir/src/functions.cpp.o
 	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/functions.cpp.o
 .PHONY : src/functions.cpp.o
@@ -152,6 +220,7 @@ src/functions.i: src/functions.cpp.i
 
 # target to preprocess a source file
 src/functions.cpp.i:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/functions.cpp.i
 	$(MAKE) -f CMakeFiles/spellcheck.dir/build.make CMakeFiles/spellcheck.dir/src/functions.cpp.i
 	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/functions.cpp.i
 .PHONY : src/functions.cpp.i
@@ -162,6 +231,7 @@ src/functions.s: src/functions.cpp.s
 
 # target to generate assembly for a file
 src/functions.cpp.s:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/functions.cpp.s
 	$(MAKE) -f CMakeFiles/spellcheck.dir/build.make CMakeFiles/spellcheck.dir/src/functions.cpp.s
 	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/functions.cpp.s
 .PHONY : src/functions.cpp.s
@@ -172,6 +242,7 @@ src/hash.o: src/hash.cpp.o
 
 # target to build an object file
 src/hash.cpp.o:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/hash.cpp.o
 	$(MAKE) -f CMakeFiles/spellcheck.dir/build.make CMakeFiles/spellcheck.dir/src/hash.cpp.o
 	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/hash.cpp.o
 .PHONY : src/hash.cpp.o
@@ -182,6 +253,7 @@ src/hash.i: src/hash.cpp.i
 
 # target to preprocess a source file
 src/hash.cpp.i:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/hash.cpp.i
 	$(MAKE) -f CMakeFiles/spellcheck.dir/build.make CMakeFiles/spellcheck.dir/src/hash.cpp.i
 	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/hash.cpp.i
 .PHONY : src/hash.cpp.i
@@ -192,6 +264,7 @@ src/hash.s: src/hash.cpp.s
 
 # target to generate assembly for a file
 src/hash.cpp.s:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/hash.cpp.s
 	$(MAKE) -f CMakeFiles/spellcheck.dir/build.make CMakeFiles/spellcheck.dir/src/hash.cpp.s
 	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/hash.cpp.s
 .PHONY : src/hash.cpp.s
@@ -202,6 +275,7 @@ src/heap.o: src/heap.cpp.o
 
 # target to build an object file
 src/heap.cpp.o:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/heap.cpp.o
 	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/heap.cpp.o
 .PHONY : src/heap.cpp.o
 
@@ -211,6 +285,7 @@ src/heap.i: src/heap.cpp.i
 
 # target to preprocess a source file
 src/heap.cpp.i:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/heap.cpp.i
 	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/heap.cpp.i
 .PHONY : src/heap.cpp.i
 
@@ -220,6 +295,7 @@ src/heap.s: src/heap.cpp.s
 
 # target to generate assembly for a file
 src/heap.cpp.s:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/src/heap.cpp.s
 	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/src/heap.cpp.s
 .PHONY : src/heap.cpp.s
 
@@ -285,8 +361,15 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... dijkstra"
 	@echo "... spellcheck"
 	@echo "... heap"
+	@echo "... src/dijkstra.o"
+	@echo "... src/dijkstra.i"
+	@echo "... src/dijkstra.s"
+	@echo "... src/findShortestPath.o"
+	@echo "... src/findShortestPath.i"
+	@echo "... src/findShortestPath.s"
 	@echo "... src/functions.o"
 	@echo "... src/functions.i"
 	@echo "... src/functions.s"

@@ -8,10 +8,10 @@
 #include <limits>
 #include <iostream>
 #include <string>
-#include <utility>
 #include <vector>
+#include <utility>
 
-#include "hash.h"
+#include "../include/hash.h"
 
 #define DEBUG false
 
@@ -24,7 +24,7 @@ public:
     // insert - Inserts a new node into the binary heap
     //
     // Inserts a node with the specified id string, key,
-    // and optionally a pointer.  They key is used to
+    // and optionally a pointer. Then key is used to
     // determine the final position of the new node.
     //
     // Returns:
@@ -68,6 +68,7 @@ public:
     //   1 if a node with the given id does not exist
     int remove(const std::string &id, int *pKey = nullptr, void *ppData = nullptr);
 
+    bool isempty();
 private:
     class node {
     public:

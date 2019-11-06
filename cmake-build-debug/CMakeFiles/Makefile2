@@ -35,10 +35,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/88/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/92/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/88/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/92/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -53,12 +53,14 @@ CMAKE_BINARY_DIR = /home/dodo/Projects/ECE365-DSA2/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/dijkstra.dir/all
 all: CMakeFiles/spellcheck.dir/all
 all: CMakeFiles/heap.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
+clean: CMakeFiles/dijkstra.dir/clean
 clean: CMakeFiles/spellcheck.dir/clean
 clean: CMakeFiles/heap.dir/clean
 
@@ -70,13 +72,40 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
+# Target rules for target CMakeFiles/dijkstra.dir
+
+# All Build rule for target.
+CMakeFiles/dijkstra.dir/all:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/depend
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target dijkstra"
+.PHONY : CMakeFiles/dijkstra.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/dijkstra.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/dijkstra.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/dijkstra.dir/rule
+
+# Convenience name for target.
+dijkstra: CMakeFiles/dijkstra.dir/rule
+
+.PHONY : dijkstra
+
+# clean rule for target.
+CMakeFiles/dijkstra.dir/clean:
+	$(MAKE) -f CMakeFiles/dijkstra.dir/build.make CMakeFiles/dijkstra.dir/clean
+.PHONY : CMakeFiles/dijkstra.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/spellcheck.dir
 
 # All Build rule for target.
 CMakeFiles/spellcheck.dir/all:
 	$(MAKE) -f CMakeFiles/spellcheck.dir/build.make CMakeFiles/spellcheck.dir/depend
 	$(MAKE) -f CMakeFiles/spellcheck.dir/build.make CMakeFiles/spellcheck.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles --progress-num=6,7,8,9 "Built target spellcheck"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles --progress-num=12,13,14,15 "Built target spellcheck"
 .PHONY : CMakeFiles/spellcheck.dir/all
 
 # Build rule for subdir invocation for target.
@@ -103,7 +132,7 @@ CMakeFiles/spellcheck.dir/clean:
 CMakeFiles/heap.dir/all:
 	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/depend
 	$(MAKE) -f CMakeFiles/heap.dir/build.make CMakeFiles/heap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target heap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/CMakeFiles --progress-num=7,8,9,10,11 "Built target heap"
 .PHONY : CMakeFiles/heap.dir/all
 
 # Build rule for subdir invocation for target.

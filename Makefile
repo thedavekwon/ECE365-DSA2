@@ -1,11 +1,17 @@
-useHeap.exe: useHeap.o heap.o hash.o
-	g++ -o useHeap.exe useHeap.o heap.o hash.o
+run: run.exe
+	./run.exe
 	
-run:
-	./useHeap.exe < file/sampleIn.txt
+run.exe: findShortestPath.o dijkstra.o functions.o heap.o hash.o
+	g++ -o run.exe findShortestPath.o dijkstra.o functions.o heap.o hash.o
 
-useHeap.o: src/useHeap.cpp
-	g++ -c src/useHeap.cpp
+findShortestPath.o: src/findShortestPath.cpp
+	g++ -c src/findShortestPath.cpp
+	
+dijkstra.o: src/dijkstra.cpp include/dijkstra.h
+	g++ -c src/dijkstra.cpp
+
+functions.o: src/functions.cpp include/functions.h
+	g++ -c src/functions.cpp
 
 heap.o: src/heap.cpp include/heap.h
 	g++ -c src/heap.cpp

@@ -3,10 +3,10 @@
 //
 
 #include "../include/hash.h"
-#include <iostream>
 
 // https://planetmath.org/goodhashtableprimes
 std::vector<int> hashTable::primes = {49157, 98317, 196613, 393241, 786433, 1572869, 3145739, 6291469};
+//std::vector<int> hashTable::primes = {21, 31, 37, 51};
 
 // hash function
 unsigned int hashTable::hash(const std::string &key)
@@ -79,9 +79,10 @@ int hashTable::insert(const std::string &key, void *pv)
     data[currentPos].isDeleted = false;
     data[currentPos].pv = pv;
 
-    if (++filled > capacity / 2)
+    if (++filled > capacity / 2) {
         if (!rehash())
             return 2;
+    }
 
     return 0;
 }

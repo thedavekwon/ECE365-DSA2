@@ -4,8 +4,6 @@
 
 #include "../include/heap.h"
 
-#include <utility>
-
 heap::node::node() = default;
 
 heap::node::node(std::string _id, int _key, void *_pData) : id(std::move(_id)), key(_key), pData(_pData) {}
@@ -115,4 +113,8 @@ void heap::print() {
         auto node = data[i];
         std::cout << node.key << " " << node.id << std::endl;
     }
+}
+
+bool heap::isempty() {
+    return currentSize == 0;
 }

@@ -37,6 +37,52 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="dijkstra">
+				<Option output="/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/dijkstra" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dodo/Projects/ECE365-DSA2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/Makefile&quot;  VERBOSE=1 dijkstra"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dijkstra/fast">
+				<Option output="/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/dijkstra" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dodo/Projects/ECE365-DSA2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/Makefile&quot;  VERBOSE=1 dijkstra/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="spellcheck">
 				<Option output="/home/dodo/Projects/ECE365-DSA2/cmake-build-debug/spellcheck" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/dodo/Projects/ECE365-DSA2/cmake-build-debug"/>
@@ -130,15 +176,27 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/dodo/Projects/ECE365-DSA2/src/dijkstra.cpp">
+			<Option target="dijkstra"/>
+		</Unit>
+		<Unit filename="/home/dodo/Projects/ECE365-DSA2/src/dijkstra.h">
+			<Option target="dijkstra"/>
+		</Unit>
+		<Unit filename="/home/dodo/Projects/ECE365-DSA2/src/findShortestPath.cpp">
+			<Option target="dijkstra"/>
+		</Unit>
 		<Unit filename="/home/dodo/Projects/ECE365-DSA2/src/functions.cpp">
+			<Option target="dijkstra"/>
 			<Option target="spellcheck"/>
 			<Option target="heap"/>
 		</Unit>
 		<Unit filename="/home/dodo/Projects/ECE365-DSA2/src/hash.cpp">
+			<Option target="dijkstra"/>
 			<Option target="spellcheck"/>
 			<Option target="heap"/>
 		</Unit>
 		<Unit filename="/home/dodo/Projects/ECE365-DSA2/src/heap.cpp">
+			<Option target="dijkstra"/>
 			<Option target="heap"/>
 		</Unit>
 		<Unit filename="/home/dodo/Projects/ECE365-DSA2/src/spellcheck.cpp">
