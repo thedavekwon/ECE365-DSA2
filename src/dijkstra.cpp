@@ -32,7 +32,7 @@ Graph::Vertex *Graph::getOrCreateVertex(const std::string name) {
 }
 
 void Graph::dijkstra(const std::string start_vertex) {
-    auto* s = static_cast<Vertex *>(vertexMap->getPointer(start_vertex));
+    auto *s = static_cast<Vertex *>(vertexMap->getPointer(start_vertex));
     for (auto v : vertices) {
         v->known = false;
         v->dist = std::numeric_limits<int>::max();
@@ -45,9 +45,9 @@ void Graph::dijkstra(const std::string start_vertex) {
     }
 
     while (!unknown_vertices.isempty()) {
-        Vertex* v;
+        Vertex *v;
         unknown_vertices.deleteMin(nullptr, nullptr, &v);
-        v-> known = true;
+        v->known = true;
         for (auto it = v->adj->begin(); it != v->adj->end(); it++) {
             if (it->first->known) continue;
             int cost = it->second;
@@ -55,6 +55,7 @@ void Graph::dijkstra(const std::string start_vertex) {
             if (v->dist + cost < it->first->dist) {
                 if (unknown_vertices.setKey(it->first->name, v->dist + cost) != 0) {
                     std::cout << it->first->name << " " << v->dist + cost << "failed" << std::endl;
+                    return;
                 }
                 it->first->dist = v->dist + cost;
                 it->first->prev = v;
@@ -91,8 +92,8 @@ void Graph::print(const std::string &output_file, const std::string &start_verte
     }
 }
 
-Graph::Vertex::Vertex(std::string _name): name(_name) {
-    adj = new std::list<std::pair<Vertex*, int>>();
+Graph::Vertex::Vertex(std::string _name) : name(_name) {
+    adj = new std::list<std::pair<Vertex *, int>>();
     known = false;
     prev = nullptr;
     dist = 0;

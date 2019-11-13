@@ -9,8 +9,7 @@ std::vector<int> hashTable::primes = {49157, 98317, 196613, 393241, 786433, 1572
 //std::vector<int> hashTable::primes = {21, 31, 37, 51};
 
 // hash function
-unsigned int hashTable::hash(const std::string &key)
-{
+unsigned int hashTable::hash(const std::string &key) {
     unsigned int hashVal = 0;
     for (auto c : key)
         hashVal = 37 * hashVal + c;
@@ -18,58 +17,48 @@ unsigned int hashTable::hash(const std::string &key)
 }
 
 // you should look for non-deleted key itself or an empty cell
-unsigned hashTable::findPos(const std::string &key)
-{
+unsigned hashTable::findPos(const std::string &key) {
     unsigned int currentPos = hash(key);
-    while ((data[currentPos].isOccupied || data[currentPos].isDeleted) && data[currentPos].key != key)
-    {
+    while ((data[currentPos].isOccupied || data[currentPos].isDeleted) && data[currentPos].key != key) {
         currentPos = (currentPos + 1) % capacity;
     }
     return currentPos;
 }
 
-bool hashTable::rehash()
-{
+bool hashTable::rehash() {
     std::vector<hashItem> oldData = data;
-    try
-    {
+    try {
         unsigned int new_size = getPrime(capacity + 1);
         data.resize(new_size);
         capacity = new_size;
     }
-    catch (std::bad_alloc &exc)
-    {
+    catch (std::bad_alloc &exc) {
         return false;
     }
 
     filled = 0;
-    for (auto &item : data)
-    {
+    for (auto &item : data) {
         item.isOccupied = false;
         item.isDeleted = false;
     }
-    for (auto &item : oldData)
-    {
+    for (auto &item : oldData) {
         if (!item.isDeleted && item.isOccupied)
             insert(item.key, item.pv);
     }
     return true;
 }
 
-unsigned int hashTable::getPrime(int size)
-{
+unsigned int hashTable::getPrime(int size) {
     return *lower_bound(primes.begin(), primes.end(), size);
 }
 
-hashTable::hashTable(int size)
-{
+hashTable::hashTable(int size) {
     data.resize(size);
     capacity = size;
     filled = 0;
 }
 
-int hashTable::insert(const std::string &key, void *pv)
-{
+int hashTable::insert(const std::string &key, void *pv) {
     unsigned int currentPos = findPos(key);
     if (data[currentPos].isOccupied && !data[currentPos].isDeleted && data[currentPos].key == key)
         return 1;
@@ -87,14 +76,12 @@ int hashTable::insert(const std::string &key, void *pv)
     return 0;
 }
 
-bool hashTable::contains(const std::string &key)
-{
+bool hashTable::contains(const std::string &key) {
     auto currentPos = findPos(key);
     return data[currentPos].isOccupied && !data[currentPos].isDeleted && data[currentPos].key == key;
 }
 
-void *hashTable::getPointer(const std::string &key, bool *b)
-{
+void *hashTable::getPointer(const std::string &key, bool *b) {
     unsigned int currentPos = findPos(key);
     if (b != nullptr)
         *b = false;
@@ -105,8 +92,7 @@ void *hashTable::getPointer(const std::string &key, bool *b)
     return data[currentPos].pv;
 }
 
-int hashTable::setPointer(const std::string &key, void *pv)
-{
+int hashTable::setPointer(const std::string &key, void *pv) {
     unsigned int currentPos = findPos(key);
     if ((!data[currentPos].isOccupied && data[currentPos].isDeleted) || data[currentPos].key != key)
         return 1;
@@ -114,8 +100,7 @@ int hashTable::setPointer(const std::string &key, void *pv)
     return 0;
 }
 
-bool hashTable::remove(const std::string &key)
-{
+bool hashTable::remove(const std::string &key) {
     unsigned int currentPos = findPos(key);
     if ((!data[currentPos].isOccupied && data[currentPos].isDeleted) || data[currentPos].key != key)
         return false;
@@ -124,8 +109,7 @@ bool hashTable::remove(const std::string &key)
     return true;
 }
 
-void hashTable::printContent()
-{
+void hashTable::printContent() {
     for (auto &item : data)
         std::cout << item.isOccupied << " ";
     std::cout << std::endl;
@@ -134,8 +118,7 @@ void hashTable::printContent()
         std::cout << item.isDeleted << " ";
     std::cout << std::endl;
 
-    for (auto &item : data)
-    {
+    for (auto &item : data) {
         if (item.key == "")
             std::cout << " ";
         std::cout << item.key << " ";

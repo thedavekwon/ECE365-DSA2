@@ -21,21 +21,27 @@ class Graph {
 private:
     class Vertex {
     public:
-        std::list<std::pair<Vertex*, int>> *adj;
-        Vertex* prev;
+        std::list<std::pair<Vertex *, int>> *adj;
+        Vertex *prev;
         std::string name;
         int dist;
         bool known;
+
         Vertex(std::string _name);
     };
-    hashTable* vertexMap;
-    std::vector<Vertex*> vertices;
+
+    hashTable *vertexMap;
+    std::vector<Vertex *> vertices;
 
     Vertex *getOrCreateVertex(const std::string name);
+
 public:
     Graph(const std::string &graph_file);
+
     void dijkstra(const std::string start_vertex);
+
     bool contains(const std::string &start_vertex);
+
     void print(const std::string &output_file, const std::string &start_vertex);
 };
 

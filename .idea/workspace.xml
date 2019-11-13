@@ -14,35 +14,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a647234b-4770-4975-a0f0-2a565c249de0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/file/graph_file.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file/v1_out.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file/v5_out.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/dijkstra.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/findShortestPath.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dijkstra.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/findShortestPath.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dijkstra.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file/v1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/findShortestPath.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hash.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heap.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/heap.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/heap.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/heap.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/heap.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/heap.dir/src/hash.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/heap.dir/src/hash.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/spellcheck.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/spellcheck.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/spellcheck.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/spellcheck.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/heap" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/heap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/spellcheck.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/spellcheck.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dict/wordlist_small" beforeDir="false" afterPath="$PROJECT_DIR$/dict/wordlist_small" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/rotate.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/hash.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/hash.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/v1_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file/v1_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/v5_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file/v5_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/dijkstra.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/dijkstra.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/heap.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/heap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dijkstra.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/dijkstra.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hash.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/hash.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/heap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/heap.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/useHeap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/useHeap.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +133,8 @@
       <workItem from="1570649891575" duration="1285000" />
       <workItem from="1570720835341" duration="6411000" />
       <workItem from="1572998163294" duration="14071000" />
-      <workItem from="1573014696006" duration="800000" />
+      <workItem from="1573014696006" duration="1512000" />
+      <workItem from="1573683817100" duration="152000" />
     </task>
     <servers />
   </component>

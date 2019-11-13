@@ -69,6 +69,7 @@ public:
     int remove(const std::string &id, int *pKey = nullptr, void *ppData = nullptr);
 
     bool isempty();
+
 private:
     class node {
     public:
