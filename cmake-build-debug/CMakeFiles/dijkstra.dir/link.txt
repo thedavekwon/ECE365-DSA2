@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/dijkstra.dir/src/findShortestPath.cpp.o CMakeFiles/dijkstra.dir/src/hash.cpp.o CMakeFiles/dijkstra.dir/src/functions.cpp.o CMakeFiles/dijkstra.dir/src/heap.cpp.o CMakeFiles/dijkstra.dir/src/dijkstra.cpp.o  -o dijkstra 
