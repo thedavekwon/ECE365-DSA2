@@ -5,6 +5,7 @@
       <config projectName="spellcheck" targetName="dijkstra" />
       <config projectName="spellcheck" targetName="spellcheck" />
       <config projectName="spellcheck" targetName="heap" />
+      <config projectName="spellcheck" targetName="togethertotheend" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -14,21 +15,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a647234b-4770-4975-a0f0-2a565c249de0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dijkstra.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file/v1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/findShortestPath.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hash.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/heap.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore.swp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file/hw4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file/hw4_input" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file/hw4_out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file/hw4_test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file/test" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/run.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TogetherToTheEnd.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/v1_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file/v1_out.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/v5_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file/v5_out.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/dijkstra.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/dijkstra.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/heap.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/heap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dijkstra.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/dijkstra.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hash.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/hash.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/useHeap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/useHeap.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +82,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.dijkstra">
+  <component name="RunManager" selected="CMake Application.togethertotheend">
     <configuration name="dijkstra" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="spellcheck" TARGET_NAME="dijkstra" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="spellcheck" RUN_TARGET_NAME="dijkstra">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -100,10 +98,16 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="togethertotheend" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="spellcheck" TARGET_NAME="togethertotheend" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="spellcheck" RUN_TARGET_NAME="togethertotheend">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="CMake Application.dijkstra" />
       <item itemvalue="CMake Application.heap" />
       <item itemvalue="CMake Application.spellcheck" />
+      <item itemvalue="CMake Application.togethertotheend" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -134,7 +138,10 @@
       <workItem from="1570720835341" duration="6411000" />
       <workItem from="1572998163294" duration="14071000" />
       <workItem from="1573014696006" duration="1512000" />
-      <workItem from="1573683817100" duration="152000" />
+      <workItem from="1573683817100" duration="279000" />
+      <workItem from="1574183483714" duration="22000" />
+      <workItem from="1574445711862" duration="11193000" />
+      <workItem from="1574480280592" duration="8000" />
     </task>
     <servers />
   </component>
